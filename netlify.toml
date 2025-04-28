@@ -1,5 +1,5 @@
 [build]
-command = "bundle install && npm install && bundle exec jekyll build"
+command = "npm run build"
 publish = "_site/"
 
 [build.environment]
