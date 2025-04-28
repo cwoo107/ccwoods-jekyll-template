@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
-  publish = "_site"
+command = "bundle install && npm install && bundle exec jekyll build"
+publish = "_site/"
 
-[[plugins]]
-  package = "netlify-plugin-decap-cms"
+[build.environment]
+RUBY_VERSION = "3.0.0"
+JEKYLL_ENV = "production"
