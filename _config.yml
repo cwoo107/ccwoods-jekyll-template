@@ -1,0 +1,20 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: ccwoods-consulting # the name of your site, e.g. ACME Corp.
+description: A simple Jekyll site
+plugins:
+  - jekyll-postcss
+
+include:
+  - _layouts
+  - _includes
+  - _posts
+  - assets/js
+  - assets/css
+
+postcss:
+  cache: false
+
+collections:
+  pages:
+    output: true

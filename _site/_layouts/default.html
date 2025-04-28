@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="min-h-screen bg-gray-50">
+{% include nav.html %}
+
+<main class="container mx-auto px-4 py-8">
+  {{ content }}
+</main>
+
+{% include footer.html %}
+
+<script src="/assets/js/application.js" type="module"></script>
+</body>
+</html>
