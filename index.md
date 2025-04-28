@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<div class="max-w-3xl mx-auto text-center">
-  <h1 class="text-4xl font-bold mb-6">Welcome to {{ site.title }}</h1>
-  <p class="text-xl text-gray-600">{{ site.description }}</p>
+<div class="hero">
+  <h1 data-cms-key="hero_title">{{ site.data.content.hero_title }}</h1>
+  <p data-cms-key="hero_text">{{ site.data.content.hero_text }}</p>
 </div>
