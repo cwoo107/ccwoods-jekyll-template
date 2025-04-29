@@ -8,7 +8,7 @@
     "css:watch": "tailwindcss -i assets/css/main.css   -o assets/css/main.css --watch --verbose",
     "css:build": "tailwindcss -i assets/css/main.css   -o assets/css/main.css --minify",
     "js:watch":  "esbuild assets/js/application.js --bundle --format=esm --outdir=assets/js --watch",
-    "js:build":  "esbuild assets/js/application.js --bundle --format=esm --minify --outdir=assets/js"
+    "js:build": "esbuild src/js/application.js    --bundle --format=esm --minify --outdir=assets/js"
   },
   "keywords": [],
   "author": "",
