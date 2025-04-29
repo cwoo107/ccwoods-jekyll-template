@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently 'bundle exec jekyll serve --livereload' 'npm run js:watch' 'npm run css:watch'",
-    "build": "JEKYLL_ENV=production bundle exec jekyll build && npm run js:build && npm run css:build",
-    "js:watch": "esbuild assets/js/application.js --bundle --format=esm --outdir=_site/assets/js --watch",
-    "js:build": "esbuild assets/js/application.js --bundle --format=esm --minify --outdir=_site/assets/js",
-    "css:watch": "tailwindcss -i assets/css/main.css -o _site/assets/css/main.css --watch",
-    "css:build": "tailwindcss -i assets/css/main.css -o _site/assets/css/main.css --minify"
+    "dev": "concurrently --kill-others \"npm run css:watch\" \"npm run js:watch\" \"bundle exec jekyll serve --livereload\"",
+    "css:watch": "tailwindcss -i assets/css/main.css   -o assets/css/main.css --watch --verbose",
+    "css:build": "tailwindcss -i assets/css/main.css   -o assets/css/main.css --minify",
+    "js:watch":  "esbuild assets/js/application.js --bundle --format=esm --outdir=assets/js --watch",
+    "js:build":  "esbuild assets/js/application.js --bundle --format=esm --minify --outdir=assets/js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +22,8 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "tailwindcss-stimulus-components": "^6.1.3"
+  }
 }

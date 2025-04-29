@@ -1,12 +1,17 @@
 module.exports = {
   content: [
     "./**/*.{html,md,js,liquid}",
-    "./_layouts/**/*.liquid",
-    "./_includes/**/*.liquid",
-    "./_posts/*.md"
+    "./_includes/**/*.html",
+    "./_layouts/**/*.html",
+    "./_posts/**/*.md",
+    "./assets/js/**/*.js",
+    "./asset/**/*.html",
   ],
-  theme: {
-    extend: {},
-  },
+  exclude: [
+    './_site/**/*',
+    './node_modules/**/*',
+    './vendor/**/*',
+  ],
+  theme: { extend: {} },
   plugins: [],
 }
