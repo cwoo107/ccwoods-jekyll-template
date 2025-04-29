@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "npm run css:build && npm run js:build && bundle exec jekyll build",
     "dev": "concurrently --kill-others \"npm run css:watch\" \"npm run js:watch\" \"bundle exec jekyll serve --livereload\"",
     "css:watch": "tailwindcss -i assets/css/main.css   -o assets/css/main.css --watch --verbose",
     "css:build": "tailwindcss -i assets/css/main.css   -o assets/css/main.css --minify",
